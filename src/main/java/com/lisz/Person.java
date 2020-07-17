@@ -1,20 +1,29 @@
 package com.lisz;
 
 import com.google.inject.Inject;
-import lombok.Data;
+import com.google.inject.Singleton;
+import com.google.inject.name.Named;
 
-@Data
+@Singleton
 public class Person {
 	private int id;
+
 	private String name;
-	private Address address;
 
 	@Inject
-	public Person(Address address) { // int id, String name,
+	@Named("address")
+	private Address address;
+
+	public Person(int id, String name) {
 		this.id = id;
 		this.name = name;
-		this.address = address;
 	}
+
+	//	public Person() {
+//		id = 2;
+//		name = "aaa";
+//		address = new Address(200, "st1");
+//	}
 
 	@Override
 	public String toString() {

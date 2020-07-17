@@ -1,14 +1,20 @@
 package com.lisz;
 
 import com.google.inject.Inject;
-import lombok.Data;
+import com.google.inject.Singleton;
+import com.google.inject.name.Named;
 
-@Data
+@Singleton
 public class Address {
-	private int number;
+	private Integer number;
+
 	private String street;
 
-	@Inject
+	public Address(){
+		number = 10;
+		street = "st";
+	}
+
 	public Address(int number, String street) {
 		this.number = number;
 		this.street = street;
