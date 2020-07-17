@@ -11,7 +11,8 @@ public class PersonModule extends AbstractModule {
 		 成员变量分成两部分：1. 带有@Inject标识的 2. 没有@Inject标识的
 		 */
 
-		// 有@Inject标识的属性，由Guice注入
+		// 有@Inject标识的属性，由Guice注入. install就是把参数对象中的bind()封装一下导入到这里来,
+		// 各个install展开之后就是一堆bind，所以bind的位置可以比较灵活
 		install(new AddressModule());
 		install(new CompanyModule());
 
