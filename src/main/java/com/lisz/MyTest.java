@@ -13,3 +13,4 @@ public class MyTest {
 		System.out.println(person);
 	}
 }
+// 打印：Person{id=1, name='shuzheng', address=Address{number=100, street='st'}, company=Company{name='Amazon', companyAddress=Address{number=120, street='Main St.'}}}
