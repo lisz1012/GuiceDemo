@@ -19,4 +19,14 @@ public class PersonTest {
 	public void testPrintAddress() {
 		person.printAddress();
 	}
+
+	@Test
+	public void testPrintCompany() {
+		person.printCompany();
+	}
+
+	@Test
+	public void testPrintPerson() {
+		System.out.println(person);
+	}
 }
