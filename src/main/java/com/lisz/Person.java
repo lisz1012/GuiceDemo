@@ -17,6 +17,7 @@ public class Person {
 	@Inject
 	private Company company;
 
+	// 注意：构造方法这里，要把需要Inject的成员变量排除出去。IntelliJ代码生成的时候不会有Inject属性的生成提示
 	public Person(int id, String name) {
 		this.id = id;
 		this.name = name;
