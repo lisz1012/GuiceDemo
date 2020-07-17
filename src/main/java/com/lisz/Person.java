@@ -19,6 +19,10 @@ public class Person {
 		this.name = name;
 	}
 
+	public void printAddress() {
+		System.out.println(address);
+	}
+
 	//	public Person() {
 //		id = 2;
 //		name = "aaa";
